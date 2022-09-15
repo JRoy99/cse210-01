@@ -60,7 +60,7 @@ def checkWin(board_list):
 
 def checkDraw(board_list):
     for i in board_list:
-        if isinstance(board_list[move-1], int):
+        if isinstance(board_list[i], int):
             return False
     return True
 
