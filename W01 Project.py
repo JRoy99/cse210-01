@@ -19,16 +19,15 @@ def playerTurn(board_list, player):
     turn_over = False
 
     while not(turn_over):
-        move = int(input(player + "\'s turn to choose a square (1-9): "))
+        move = input(player + "\'s turn to choose a square (1-9): ")
         try:
-            board_list[move-1] = player
-        except: 
-            print("Invalid Selection")
-        else:     
-            if not(isinstance(board_list[move-1], str)):
-                turn_over = True
+            if type(board_list[int(move)-1]) == int:
+                board_list[int(move)-1] = player
+                turn_over = True            
             else:
                 print("Invalid Selection")
+        except:
+            print("Invalid Selection")    
     pass
 
 def checkWin(board_list):
@@ -59,8 +58,8 @@ def checkWin(board_list):
 
 
 def checkDraw(board_list):
-    for i in board_list:
-        if isinstance(board_list[i], int):
+    for i in range(len(board_list)):
+        if type(board_list[i]) ==  int:
             return False
     return True
 
@@ -72,19 +71,24 @@ def main():
                     4, 5, 6,
                     7, 8, 9]
 
+    drawBoard(board_list)
     while not(game_over):
-        drawBoard(board_list)
         playerTurn(board_list, player_1)
+        drawBoard(board_list)
         if checkWin(board_list):
             game_over = True
             print(player_1 + " wins!")
+            break
         elif checkDraw(board_list):
             game_over = True
             print("It's a draw!")
+            break
         playerTurn(board_list, player_2)
+        drawBoard(board_list)
         if checkWin(board_list):
             game_over = True
             print(player_2 + " wins!")
+            break
 
 
 if __name__ == "__main__":
