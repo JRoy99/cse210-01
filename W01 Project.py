@@ -72,19 +72,19 @@ def main():
                     4, 5, 6,
                     7, 8, 9]
 
-    #while not(game_over):
-    drawBoard(board_list)
-    playerTurn(board_list, player_1)
-    if checkWin(board_list):
-        game_over = True
-        print(player_1 + " wins!")
-    elif checkDraw(board_list):
-        game_over = True
-        print("It's a draw!")
-    playerTurn(board_list, player_2)
-    if checkWin(board_list):
-        game_over = True
-        print(player_2 + " wins!")
+    while not(game_over):
+        drawBoard(board_list)
+        playerTurn(board_list, player_1)
+        if checkWin(board_list):
+            game_over = True
+            print(player_1 + " wins!")
+        elif checkDraw(board_list):
+            game_over = True
+            print("It's a draw!")
+        playerTurn(board_list, player_2)
+        if checkWin(board_list):
+            game_over = True
+            print(player_2 + " wins!")
 
 
 if __name__ == "__main__":
