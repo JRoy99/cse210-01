@@ -2,7 +2,7 @@
 # Date: 9/15/2022
 # Assignment: W01 Prove; Tic-Tac-Toe
 # Description: Allows two players to play tic-tac-toe on a 3x3 board
-
+ 
 import math
 
 #Iterates through board_list and adds formatting to draw the game board
