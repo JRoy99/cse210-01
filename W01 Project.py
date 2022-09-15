@@ -5,6 +5,7 @@
 
 import math
 
+#Iterates through board_list and adds formatting to draw the game board
 def drawBoard(board_list):
     for i in range(9):
         print(board_list[i], end="")
@@ -15,9 +16,9 @@ def drawBoard(board_list):
     print("\n")
     pass
 
+#Gets and validates player input for next move, changes the board_list to reflect move
 def playerTurn(board_list, player):
     turn_over = False
-
     while not(turn_over):
         move = input(player + "\'s turn to choose a square (1-9): ")
         try:
@@ -30,6 +31,7 @@ def playerTurn(board_list, player):
             print("Invalid Selection")    
     pass
 
+#Checks all win conditions
 def checkWin(board_list):
 
     #Check horizontal win conditions
@@ -56,22 +58,25 @@ def checkWin(board_list):
     
     return False
 
-
+#Iterates through board_list. If an open (int) space is found, returns false
 def checkDraw(board_list):
     for i in range(len(board_list)):
         if type(board_list[i]) ==  int:
             return False
     return True
 
+#Runs the game
 def main():
+    #Set initial parameters
     game_over = False
     player_1 = "x"
     player_2 = "o"
     board_list = [1, 2, 3,
                     4, 5, 6,
                     7, 8, 9]
-
+    #Draw board
     drawBoard(board_list)
+    #Game loop: Players take turns, board redrawn and checked for end conditions after each move
     while not(game_over):
         playerTurn(board_list, player_1)
         drawBoard(board_list)
