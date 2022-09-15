@@ -26,9 +26,9 @@ def playerTurn(board_list, player):
                 board_list[int(move)-1] = player
                 turn_over = True            
             else:
-                print("Invalid Selection")
+                print("Invalid Selection: Square is already filled")
         except:
-            print("Invalid Selection")    
+            print("Invalid Selection: Input is invalid or out of range")    
     pass
 
 #Checks all win conditions
