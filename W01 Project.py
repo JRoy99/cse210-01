@@ -95,6 +95,5 @@ def main():
             print(player_2 + " wins!")
             break
 
-
 if __name__ == "__main__":
     main()
