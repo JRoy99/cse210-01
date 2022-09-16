@@ -1,11 +1,4 @@
 # cse210-w01-code
 W01 Prove: Developer Assignment for CSE 210
 
-This was my first time using any sort of version control system to develop a program, and I'm not entirely sure I used it as effectively as I could have.
-Through a VS extension, I was able to directly modify the program and commit changes to GitHub from VS Code.
-However, I was unable to run the program to test it unless I had a separate version saved locally on my computer to run. 
-The back and forth between the two felt inefficient. 
-Otherwise, I used the version control system to save changes to the program as I reached different milestones (or at least this was the goal).
-In reality, I committed changes every time I fixed a bug or changed line spacing.
-Again, this was my first time using a VCS and I'm sure I'll need to make some changes to accustom myself to it.
-Overall, I can already see the power of a remote repository and version control system and will likely import some personal Java projects to make use of the additional functionality.
+  This was my first time using any sort of version control system to develop a program, and I'm not entirely sure I used it as effectively as I could have. Through a VS extension, I was able to directly modify the program and commit changes to GitHub from VS Code. However, I was unable to run the program to test it unless I had a separate version saved locally on my computer to run. The back and forth between the two felt inefficient. Otherwise, I used the version control system to save changes to the program as I reached different milestones (or at least this was the goal). In reality, I committed changes every time I fixed a bug or changed line spacing. Again, this was my first time using a VCS and I'm sure I'll need to make some changes to accustom myself to it. Overall, I can already see the power of a remote repository and version control system and will likely import some personal Java projects to make use of the additional functionality.
